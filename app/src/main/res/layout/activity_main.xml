@@ -52,11 +52,7 @@
             android:layout_height="wrap_content"
             android:button="@null"
             android:drawableTop="@drawable/find_item"
-<<<<<<< HEAD
-            android:text="社区"
-=======
             android:text="发现"
->>>>>>> 5651dbac5b3bc8d0136cdea03a703538617e2885
             android:textSize="14sp"
             android:gravity="center"
             android:textColor="@drawable/text_item"
