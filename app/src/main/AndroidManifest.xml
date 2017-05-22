@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.MainActivity"></activity>
+        <activity android:name=".Activities.InputMethodManagerTest"></activity>
     </application>
 
 </manifest>
