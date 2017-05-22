@@ -16,7 +16,7 @@ public class WelcomeActivity extends Activity {
             super.handleMessage(msg);
             Intent i=new Intent(WelcomeActivity.this,MainActivity.class);
             startActivity(i);
-
+            finish();
         }
     };
     @Override
