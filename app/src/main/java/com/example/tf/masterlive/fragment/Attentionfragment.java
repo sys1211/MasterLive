@@ -13,10 +13,10 @@ import com.example.tf.masterlive.R;
  * Created by Administrator on 2017/5/22.
  */
 
-public class HomePage__fragment extends Fragment {
+public class Attentionfragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v=inflater.inflate(R.layout.homepage__fragment,null);
+        View v=inflater.inflate(R.layout.attention_fragment,null);
         return v;
     }
 }

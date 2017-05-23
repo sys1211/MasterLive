@@ -38,9 +38,9 @@ public class LiveFragment extends Fragment{
         vp= (ViewPager)v.findViewById(R.id.viewpager);
         tabLayout= (TabLayout)v.findViewById(R.id.tabLayout);
         arrayList=new ArrayList<>();
-        arrayList.add(new Attention__fragment());
-        arrayList.add(new HomePage__fragment());
-        arrayList.add(new Value__fragment());
+        arrayList.add(new Attentionfragment());
+        arrayList.add(new HomePagefragment());
+        arrayList.add(new Valuefragment());
 
         Tab_title=new ArrayList<>();
         Tab_title.add("关注");

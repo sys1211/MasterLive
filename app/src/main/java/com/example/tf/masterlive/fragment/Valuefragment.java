@@ -13,7 +13,7 @@ import com.example.tf.masterlive.R;
  * Created by Administrator on 2017/5/22.
  */
 
-public class Value__fragment extends Fragment {
+public class Valuefragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.value__fragment,null);
