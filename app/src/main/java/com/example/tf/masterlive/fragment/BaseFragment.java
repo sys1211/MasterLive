@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+import com.example.tf.masterlive.R;
 import com.example.tf.masterlive.adapter.MainListRecyclerviewAdapter;
 import com.example.tf.masterlive.beans.BaseBean;
 
@@ -24,36 +25,28 @@ import java.util.ArrayList;
 public abstract class BaseFragment extends Fragment {
     protected View view;
     protected RecyclerView rv;
-    protected ArrayList<BaseBean> list;
     protected MainListRecyclerviewAdapter adapter;
     protected String smb;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view=inflater.inflate(getFragmnetView(),null);
-        try {
-            initview();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        view=inflater.inflate(R.layout.homepagerecycler,null);
+        rv = (RecyclerView) view.findViewById(R.id.homepage_rcv1);
+        LinearLayoutManager manager = new LinearLayoutManager(getContext());
+        rv.setLayoutManager(manager);
+        onstart();
+
+
 
         return view;
     }
+    public abstract void onstart();
 
-    public void init() {
-        rv= (RecyclerView) view.findViewById(getRecyclerview());
-        list=new ArrayList<>();
-        adapter=new MainListRecyclerviewAdapter(list,getContext());
-        LinearLayoutManager manager=new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL,false);
-        rv.setLayoutManager(manager);
+    public void setadapter(ArrayList<BaseBean> listBean){
+        adapter = new MainListRecyclerviewAdapter(listBean,getContext());
         rv.setAdapter(adapter);
-
-
     }
 
 
-    protected abstract int getFragmnetView();
-    protected abstract int getRecyclerview();
-    public abstract void initview() throws JSONException;
 
 }

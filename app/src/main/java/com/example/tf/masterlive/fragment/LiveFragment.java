@@ -55,6 +55,7 @@ public class LiveFragment extends Fragment{
         myadapter=new TabLayoutFragmentadapter(fragmentManager,arrayList,Tab_title);
         vp.setAdapter(myadapter);
         tabLayout.setupWithViewPager(vp);
+        vp.setCurrentItem(1);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

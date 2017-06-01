@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_yugao"
+            android:layout_margin="10dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="看前别喝水：专访喜剧女王马丽"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#预告# 06月02日 16:30"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:background="#CB9C64"
+        android:text="关注"
+        android:textColor="#fff"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        />
+
+</RelativeLayout>

@@ -7,7 +7,9 @@ import android.view.ViewGroup;
 
 
 import com.example.tf.masterlive.beans.BaseBean;
+import com.example.tf.masterlive.beans.PredictionBean;
 import com.example.tf.masterlive.cards.BaseCard;
+import com.example.tf.masterlive.cards.PredictionCard;
 
 import java.util.ArrayList;
 
@@ -27,9 +29,10 @@ public class MainListRecyclerviewAdapter extends RecyclerView.Adapter<MainListRe
     @Override
     public Viewhodler onCreateViewHolder(ViewGroup parent, int viewType) {
         View view=null;
-//        if (viewType==ContentBean.class.getCanonicalName().hashCode()) {
-//            view=new ContentCard(mContext);
-//        } else if (viewType== NoDataBean.class.getCanonicalName().hashCode()) {
+        if (viewType==PredictionBean.class.getCanonicalName().hashCode()) {
+            view=new PredictionCard(mContext);
+        }
+//          else if (viewType== NoDataBean.class.getCanonicalName().hashCode()) {
 //            view=new NoDataCard(mContext);
 //        }
         return new Viewhodler(view);
@@ -49,9 +52,10 @@ public class MainListRecyclerviewAdapter extends RecyclerView.Adapter<MainListRe
     public int getItemViewType(int position) {
         int viewtype=-1;
         if (position>=0&&list.get(position)!=null) {
-//            if (list.get(position) instanceof ContentBean) {
-//                viewtype=ContentBean.class.getCanonicalName().hashCode();
-//            } else if (list.get(position) instanceof NoDataBean) {
+            if (list.get(position) instanceof PredictionBean) {
+                viewtype=PredictionBean.class.getCanonicalName().hashCode();
+            }
+//            else if (list.get(position) instanceof NoDataBean) {
 //                viewtype= NoDataBean.class.getCanonicalName().hashCode();
 //            }
         }

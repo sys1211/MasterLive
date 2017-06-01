@@ -17,6 +17,12 @@ public class HomePagefragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.homepage__fragment,null);
+        initview();
         return v;
+    }
+
+    private void initview() {
+        HomePageDataFragment hpdf=new HomePageDataFragment();
+        getActivity().getSupportFragmentManager().beginTransaction().add(R.id.homepage_fl,hpdf).commit();
     }
 }
